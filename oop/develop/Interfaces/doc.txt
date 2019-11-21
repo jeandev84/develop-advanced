@@ -1,0 +1,6 @@
+Supposons que nous avons une figure geometrique.
+Soit un retangle, carre et un cercle.
+Par exemple, on veut calculer leurs Aires.
+Pour calculer l'aire d'un rectangle on aura besoin de sa Longeur (L) et Largeur(l).
+Pour calculer l'aire d'un carre on aura besoin de l'un de ses cotes (a).
+Pour calculer l'aire d'un cercle on aura besoin du Rayon (r).
