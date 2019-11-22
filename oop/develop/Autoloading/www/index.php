@@ -33,7 +33,7 @@ spl_autoload_register(function (string $className) {
          die(sprintf('File (%s) does not exist', $filePath));
     }
 
-    require $filePath;
+    require_once $filePath;
 });
 
 

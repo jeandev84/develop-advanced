@@ -37,5 +37,5 @@ require ROOT . '/helpers/functions.php';
 
 
 # Namespaces
-require ROOT . '/develop/web/www/index.php';
+require ROOT . '/develop/Autoloading/www/index.php';
 
