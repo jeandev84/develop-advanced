@@ -2,7 +2,6 @@
 namespace Blog\Controllers;
 
 
-use Framework\Services\Database\Db;
 use Framework\Templating\View;
 
 
@@ -17,17 +16,12 @@ class MainController
      private $view;
 
 
-     /** @var Db  */
-     private $db;
-
-
      /**
       * MainController constructor.
      */
      public function __construct()
      {
          $this->view = new View(__DIR__.'/../../../templates');
-         $this->db = new Db();
      }
 
 
@@ -37,8 +31,11 @@ class MainController
      */
      public function main()
      {
-         $articles = $this->db->query('SELECT * FROM `articles`;');
-         $this->view->renderHtml('blog/main/main.php', compact('articles'));
+          $articles = [];
+
+          $this->view->renderHtml('blog/main/main.php', [
+              'articles' => $articles
+          ]);
      }
 
 

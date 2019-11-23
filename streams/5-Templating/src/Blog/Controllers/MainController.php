@@ -2,7 +2,6 @@
 namespace Blog\Controllers;
 
 
-use Framework\Services\Database\Db;
 use Framework\Templating\View;
 
 
@@ -17,17 +16,12 @@ class MainController
      private $view;
 
 
-     /** @var Db  */
-     private $db;
-
-
      /**
       * MainController constructor.
      */
      public function __construct()
      {
          $this->view = new View(__DIR__.'/../../../templates');
-         $this->db = new Db();
      }
 
 
@@ -37,8 +31,15 @@ class MainController
      */
      public function main()
      {
-         $articles = $this->db->query('SELECT * FROM `articles`;');
-         $this->view->renderHtml('blog/main/main.php', compact('articles'));
+          $articles = [
+              ['name' => 'Статья 1', 'text' => 'Текст статьи 1'],
+              ['name' => 'Статья 2', 'text' => 'Текст статьи 2'],
+          ];
+
+          /* $this->view->renderHtml('blog/main/main.php', compact('articles')); */
+          $this->view->renderHtml('blog/main/main.php', [
+              'articles' => $articles
+          ]);
      }
 
 
@@ -50,6 +51,7 @@ class MainController
      */
      public function sayHello(string $name)
      {
+         /* echo 'Привет, '. $name; */
          $this->view->renderHtml('blog/main/hello.php', [
              'name' => $name
          ]);

@@ -6,7 +6,7 @@ require_once __DIR__.'/../vendor/autoload.php';
  * Requesting
  * $route = $request->getPath();
  * $route = $request->server('REQUEST_URI');
-*/
+ */
 $request = new \Framework\Http\Request();
 $route = $request->getPath();
 
@@ -14,13 +14,13 @@ $route = $request->getPath();
 /**
  * Load routes collection
  * dump($routes)
-*/
+ */
 $routes = require __DIR__.'/../src/routes.php';
 
 
 /**
  * Matching route
-*/
+ */
 $isRouteFound = false;
 
 foreach($routes as $path => $controllerAndAction)
@@ -47,7 +47,7 @@ dump($matches);
 
 /**
  * Call Action
-*/
+ */
 
 unset($matches[0]);
 

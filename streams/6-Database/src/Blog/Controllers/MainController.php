@@ -38,7 +38,14 @@ class MainController
      public function main()
      {
          $articles = $this->db->query('SELECT * FROM `articles`;');
-         $this->view->renderHtml('blog/main/main.php', compact('articles'));
+
+         debug($articles, true);
+
+         /*
+         $this->view->renderHtml('blog/main/main.php', [
+             'articles' => $articles
+         ]);
+         */
      }
 
 
