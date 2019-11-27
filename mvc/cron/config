@@ -1,0 +1,2 @@
+// * * * * * php c:\OSPanel\domains\myproject.loc\bin\cli.php TestCron -x=20 -y=17
+* * * * * php /var/www/webshake/mvc/bin/cli.php TestCron -x=20 -y=17

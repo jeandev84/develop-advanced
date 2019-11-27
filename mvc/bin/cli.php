@@ -1,8 +1,8 @@
 <?php
 
 /**
-$ php bin/cli.php NameOfClass -argument1=value1 -b=value2
- */
+ * $ php bin/cli.php NameOfClass -argument1=value1 -b=value2
+*/
 try {
 
     unset($argv[0]);
