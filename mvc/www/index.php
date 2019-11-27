@@ -5,7 +5,7 @@ try {
 
     /**
      * Autoloader Composer
-     */
+    */
     require_once __DIR__.'/../vendor/autoload.php';
 
 
@@ -13,7 +13,7 @@ try {
      * Requesting
      * $route = $request->getPath();
      * $route = $request->server('REQUEST_URI');
-     */
+    */
     $request = new \Framework\Http\Request();
     $route = $request->getPath();
 
@@ -21,13 +21,13 @@ try {
     /**
      * Load routes collection
      * dump($routes)
-     */
+    */
     $routes = require __DIR__.'/../src/routes.php';
 
 
     /**
      * Matching route
-     */
+    */
     $isRouteFound = false;
 
     foreach($routes as $path => $controllerAndAction)
@@ -53,7 +53,7 @@ try {
 
     /**
      * Call Action
-     */
+    */
 
     unset($matches[0]);
 
@@ -77,5 +77,7 @@ try {
     $view = new \Framework\Templating\View(__DIR__ . '/../templates/errors');
     $view->renderHtml('401.php', ['error' => $e->getMessage()], 401);
 }
+
+
 
 

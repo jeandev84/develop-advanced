@@ -10,7 +10,7 @@
 <table class="layout">
     <tr>
         <td colspan="2" class="header">
-            Мой блог
+            <a href="/" style="text-decoration: none;color: #888;">Блог - программиста</a>
         </td>
     </tr>
     <tr>
