@@ -5,7 +5,8 @@
           <?= $article->getName() ?>
       </a>
   </h2>
-  <p><?= $article->getText() ?></p>
+  <!--<p><?php // $article->getText() ?></p>-->
+  <p><?= $article->getParsedText() ?></p>
   <hr>
 <?php endforeach; ?>
 <?php include __DIR__.'/../partials/footer.php'; ?>

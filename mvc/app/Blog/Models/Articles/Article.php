@@ -67,6 +67,16 @@ class Article extends ActiveRecordEntity
 
 
     /**
+     * @return string
+    */
+    public function getParsedText(): string
+    {
+        $parser = new \Parsedown();
+        return $parser->text($this->getText());
+    }
+
+
+    /**
      * Get id current author
      * @return int
     */
