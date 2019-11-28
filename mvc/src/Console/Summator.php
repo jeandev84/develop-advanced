@@ -2,7 +2,7 @@
 namespace Framework\Console;
 
 
-use Blog\Controllers\Contracts\AbstractController;
+use Framework\Console\Contracts\AbstractCommand;
 use Framework\Exceptions\Console\ConsoleException;
 
 
@@ -11,13 +11,13 @@ use Framework\Exceptions\Console\ConsoleException;
  * Class Summator
  * @package Framework\Console
 */
-class Summator extends AbstractController
+class Summator extends AbstractCommand
 {
 
     /**
      * @throws ConsoleException
      */
-    private function checkParams()
+    protected function checkParams()
     {
         $this->ensureParamExists('a');
         $this->ensureParamExists('b');

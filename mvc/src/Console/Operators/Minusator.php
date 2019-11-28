@@ -2,7 +2,7 @@
 namespace Framework\Console\Operators;
 
 
-use Blog\Controllers\Contracts\AbstractController;
+use Framework\Console\Contracts\AbstractCommand;
 use Framework\Exceptions\Console\ConsoleException;
 
 
@@ -11,13 +11,13 @@ use Framework\Exceptions\Console\ConsoleException;
  * Class Minusator
  * @package Framework\Console\Operators
  */
-class Minusator extends AbstractController
+class Minusator extends AbstractCommand
 {
 
     /**
      * @throws ConsoleException
      */
-    private function checkParams()
+    protected function checkParams()
     {
         $this->ensureParamExists('x');
         $this->ensureParamExists('y');
