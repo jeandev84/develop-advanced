@@ -1,14 +1,14 @@
 <?php
-namespace Blog\Controllers;
+namespace App\Blog\Controllers;
 
 
-use Blog\Controllers\Contracts\AbstractController;
-use Blog\Models\Articles\Article;
+use App\Blog\Controllers\Contracts\AbstractController;
+use App\Blog\Models\Articles\Article;
 
 
 /**
  * Class MainController
- * @package Blog\Controllers
+ * @package App\Blog\Controllers
 */
 class MainController extends AbstractController
 {

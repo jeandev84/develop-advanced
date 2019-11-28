@@ -1,8 +1,8 @@
 <?php
-namespace Blog\Controllers\Contracts;
+namespace App\Blog\Controllers\Contracts;
 
-use Blog\Models\Users\User;
-use Blog\Services\UserAuthService;
+use App\Blog\Models\Users\User;
+use App\Blog\Services\UserAuthService;
 use Framework\Templating\View;
 
 

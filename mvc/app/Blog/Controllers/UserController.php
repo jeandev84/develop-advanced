@@ -1,15 +1,15 @@
 <?php
-namespace Blog\Controllers;
+namespace App\Blog\Controllers;
 
 
-use Blog\Controllers\Contracts\AbstractController;
-use Blog\Services\EmailSender;
+use App\Blog\Controllers\Contracts\AbstractController;
+use App\Blog\Services\EmailSender;
 use Framework\Exceptions\InvalidArgumentException;
 
 
 /**
  * Class UserController
- * @package Blog\Controllers
+ * @package App\Blog\Controllers
 */
 class UserController extends AbstractController
 {

@@ -32,7 +32,7 @@ class Db
     {
         /* self::$instancesCount++; */
 
-        $dbOptions = (require __DIR__ . '/../../../settings.php')['db'];
+        $dbOptions = (require __DIR__ . '/../../../config/settings.php')['db'];
 
         try {
 
@@ -87,7 +87,7 @@ class Db
      * @param array $params
      * @param string $className
      * @return array|null
-     */
+    */
     public function query(string $sql, $params = [], string $className = 'stdClass'): ?array
     {
         $sth = $this->pdo->prepare($sql);

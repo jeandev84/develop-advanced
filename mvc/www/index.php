@@ -6,7 +6,7 @@ try {
     /**
      * Autoloader Composer
     */
-    require_once __DIR__.'/../vendor/autoload.php';
+    require_once __DIR__ . '/../vendor/autoload.php';
 
 
     /**
@@ -22,7 +22,7 @@ try {
      * Load routes collection
      * dump($routes)
     */
-    $routes = require __DIR__.'/../src/routes.php';
+    $routes = require __DIR__ . '/../config/routes.php';
 
 
     /**

@@ -1,5 +1,5 @@
 <?php
-namespace Blog\Models\Users;
+namespace App\Blog\Models\Users;
 
 
 use Framework\Exceptions\InvalidArgumentException;

@@ -1,12 +1,12 @@
 <?php
-namespace Blog\Services;
+namespace App\Blog\Services;
 
 
-use Blog\Models\Users\User;
+use App\Blog\Models\Users\User;
 
 /**
  * Class EmailSender
- * @package Blog\Models\Services
+ * @package App\Blog\Models\Services
 */
 class EmailSender
 {

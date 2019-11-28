@@ -1,16 +1,16 @@
 <?php
-namespace Blog\Controllers;
+namespace App\Blog\Controllers;
 
 
-use Blog\Controllers\Contracts\AbstractController;
-use Blog\Models\Articles\Article;
+use App\Blog\Controllers\Contracts\AbstractController;
+use App\Blog\Models\Articles\Article;
 use Framework\Exceptions\NotFoundException;
 use Framework\Exceptions\UnauthorizedException;
 
 
 /**
  * Class ArticleController
- * @package Blog\Controllers
+ * @package App\Blog\Controllers
  */
 class ArticleController extends AbstractController
 {

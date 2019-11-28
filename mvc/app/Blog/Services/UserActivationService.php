@@ -1,14 +1,14 @@
 <?php
-namespace Blog\Services;
+namespace App\Blog\Services;
 
 
-use Blog\Models\Users\User;
+use App\Blog\Models\Users\User;
 use Framework\Services\Database\Db;
 
 
 /**
  * Class UserActivationService
- * @package Blog\Models\Services
+ * @package App\Blog\Models\Services
  */
 class UserActivationService
 {

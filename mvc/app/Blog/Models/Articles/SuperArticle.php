@@ -1,10 +1,10 @@
 <?php
-namespace Blog\Models\Articles;
+namespace App\Blog\Models\Articles;
 
 
 /**
  * Class SuperArticle
- * @package Blog\Models\Articles
+ * @package App\Blog\Models\Articles
  */
 class SuperArticle extends Article
 {

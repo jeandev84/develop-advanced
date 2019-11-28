@@ -1,8 +1,8 @@
 <?php
-namespace Blog\Models\Articles;
+namespace App\Blog\Models\Articles;
 
 
-use Blog\Models\Users\User;
+use App\Blog\Models\Users\User;
 use Framework\Exceptions\InvalidArgumentException;
 use Framework\Services\ActiveRecord\ActiveRecordEntity;
 
@@ -10,7 +10,7 @@ use Framework\Services\ActiveRecord\ActiveRecordEntity;
 
 /**
  * Class Article
- * @package Blog\Models\Articles
+ * @package App\Blog\Models\Articles
  */
 class Article extends ActiveRecordEntity
 {

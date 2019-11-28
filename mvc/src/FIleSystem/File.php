@@ -8,6 +8,7 @@ namespace Framework\FileSystem;
 */
 class File
 {
+
     /** @var string */
     private $root;
 
@@ -23,16 +24,37 @@ class File
     /**
      * @param string $path
      * @return bool
-     */
+    */
     public function generate(string $path)
     {
-        $direction = pathinfo($path)['dirname'];
+        $direction = $this->to(pathinfo($path)['dirname']);
 
         if(! is_dir($direction))
         {
-            mkdir($this->root .'/' . $direction, 0777, true);
+            mkdir($direction, 0777, true);
         }
 
         return touch($path) ? $path : false;
+    }
+
+
+    /**
+     * @param string $path
+     * @return string
+    */
+    public function to(string $path): string
+    {
+        return $this->root . DIRECTORY_SEPARATOR . $this->sanitized($path);
+    }
+
+
+
+    /**
+     * @param string $path
+     * @return mixed
+    */
+    private function sanitized(string $path)
+    {
+        return str_replace(['\\', '/'], DIRECTORY_SEPARATOR, trim($path, '/'));
     }
 }

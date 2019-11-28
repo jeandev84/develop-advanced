@@ -1,13 +1,13 @@
 <?php
-namespace Blog\Services;
+namespace App\Blog\Services;
 
 
-use Blog\Models\Users\User;
+use App\Blog\Models\Users\User;
 
 
 /**
  * Class UserAuthService
- * @package Blog\Services
+ * @package App\Blog\Services
 */
 class UserAuthService
 {
