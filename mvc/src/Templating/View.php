@@ -8,6 +8,7 @@ namespace Framework\Templating;
  */
 class View
 {
+
     /** @var string */
     private $templatePath;
 
@@ -59,4 +60,15 @@ class View
         echo $buffer;
     }
 
+
+    /**
+     * @param $data
+     * @param int $code
+    */
+    public function displayJson($data, int $code = 200)
+    {
+        header('Content-type: application/json; charset=utf-8');
+        http_response_code($code);
+        echo json_encode($data);
+    }
 }

@@ -9,7 +9,7 @@ use Framework\Services\Database\Db;
  * Class ActiveRecordEntity
  * @package Framework\Services\ActiveRecord
 */
-abstract class ActiveRecordEntity
+abstract class ActiveRecordEntity implements \JsonSerializable
 {
 
     /** @var int */
@@ -111,6 +111,7 @@ abstract class ActiveRecordEntity
         }
     }
 
+
     /**
      * Update existed record
      * здесь мы обновляем существующую запись в базе
@@ -193,6 +194,15 @@ abstract class ActiveRecordEntity
             [':id' => $this->id]
         );
         $this->id = null;
+    }
+
+
+    /**
+     * @return array|mixed
+    */
+    public function jsonSerialize()
+    {
+        return $this->mapPropertiesToDbFormat();
     }
 
     /**

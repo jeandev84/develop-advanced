@@ -9,7 +9,7 @@ use Framework\Services\ActiveRecord\ActiveRecordEntity;
 /**
  * Class User
  * @package Blog\Models\Users
- */
+*/
 class User extends ActiveRecordEntity
 {
 

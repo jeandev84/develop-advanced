@@ -1,7 +1,13 @@
 <?php
 
+/** http://localhost:8888 */
 
 try {
+
+    /**
+     * Includes helpers functions
+    */
+    require_once __DIR__.'/../helpers/functions.php';
 
     /**
      * Autoloader Composer
@@ -43,7 +49,7 @@ try {
 
     if(!$isRouteFound)
     {
-        throw new \Framework\Exceptions\NotFoundException();
+        throw new \Framework\Exceptions\NotFoundException('Route not found');
     }
 
     /*

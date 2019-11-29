@@ -1,0 +1,12 @@
+# MYSQL
+cd C:\OSPanel\modules\database\MySQL-5.7-x64\bin
+C:\OSPanel\modules\database\MySQL-5.7-x64\bin>.\mysql.exe -u root
+
+
+# Connection to Database (Example: MariaDB)
+$ mysql -u root
+
+
+# Show all databases
+$ SHOW DATABASES;
+

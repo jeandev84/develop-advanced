@@ -1,14 +1,15 @@
 <?php
 namespace Framework\Http;
 
+
 /**
  * Class Request
  * @package Framework\Http
- */
+*/
 class Request
 {
 
-     /**
+    /**
       * Get Path of URL
       * @return string
      */
